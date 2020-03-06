@@ -1,8 +1,10 @@
 #JSON To SQL INSERT
 
-### JSON Structure
+### JSON (Array) Structure
 
 Name of the JSON needs to be the name of the table you want to insert data into, CUSTOMERS.json etc.
+
+JSON Array 
 
 [ {},{},{} ] Each object within being a customer row to insert.
 

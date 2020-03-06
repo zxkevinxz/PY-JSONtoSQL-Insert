@@ -3,17 +3,14 @@ import json
 inputFile = input("please enter file path: ")
 fileName = inputFile[inputFile.rfind("/")+1:inputFile.rfind(".")]
 
-
 fileIn = open(inputFile, 'r')
 fileOut = open('./Insert-{}.sql'.format(fileName), 'a')
 
-testIn = fileIn.read()
-
-test = json.loads(testIn)
-
+jsonString = fileIn.read()
+table = json.loads(jsonString)
 sqlScript = ""
 
-for ob in test:
+for row in table:
     sql = "INSERT INTO {}(".format(fileName)
     values = " VALUES("
     for key in ob:
